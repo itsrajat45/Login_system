@@ -1,0 +1,58 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+  <div class='row mt-5'>
+    <div class='col-4 mx-auto'>
+      <h4 class='text-center'>User Registration</h4><hr>
+      <form action="{{url_for('reg')}}" method='post'>
+        <div class='form-group'>
+          <label>Email</label>
+          <input type='email' name='email' required class='form-control'>  
+        </div>
+        <div class='form-group'>
+          <label>Password</label>
+          <input type='password' name='upass' required class='form-control'>  
+        </div>
+        <div class='form-group'>
+          <label>Re-type Password</label>
+          <input type='password' name='rpass' required class='form-control'>  
+        </div>
+        <div class='form-group'>
+          <label>First Name</label>
+          <input type='text' name='uname' required class='form-control'>  
+        </div>
+        <div class='form-group'>
+          <label>Last Name</label>
+          <input type='text' name='lname' required class='form-control'>  
+        </div>
+        <div class='form-group'>
+          <label>Gender</label><br>
+            <label class="radio-inline"> <input type="radio"  name="gender" value="Male" >Male</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label class="radio-inline"><input type="radio" name="gender" value="Female" >Female</label>  
+        </div>
+        <div class='form-group'>
+          <div class="select-wrap">
+            <label>Country</label>
+              <select name="country"  class="form-control">
+                <option value="">Select</option>
+                <option value="INDIA">INDIA</option>
+                <option value="USA">USA</option>
+                <option value="AUSTRALIA">AUSTRALIA</option>
+                <option value="CANADA">CANADA</option>
+                <option value="OTHERS">OTHERS</option>
+              </select>
+          </div>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox">
+          <label class="form-check-label" for="flexCheckDefault">I agree with terms and conditions</label>
+        </div><br>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox">
+          <label class="form-check-label" for="flexCheckDefault">I want to receive the newsletter</label>
+        </div><br>
+        <input type='submit' name='submit' value='Submit' class='btn btn-success'>
+      </form>
+    </div>
+  </div>
+{% endblock %}

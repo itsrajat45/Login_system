@@ -1,0 +1,14 @@
+create login System
+
+Step 1 :  mkdir login_system
+Step 2 :  cd login_system
+Step 3 :  py -3 -m venv venv
+Step 4 :  venv\Scripts\activate
+Step 5 :  pip install Flask
+Step 6 :  pip install flask_mysqldb
+
+create templates file and copy paste all html files in it.
+
+create databese 
+
+This project using mysql databese. 
